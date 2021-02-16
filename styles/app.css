@@ -1,7 +1,28 @@
-h1 {
-    color: red;
+/*---------------------------------Navbar------------------------------------*/
+#topnav {
+    background-color: #333;
+    overflow: hidden;
 }
 
-p {
-    color: green;
+#topnav a {
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
 }
+
+.topnav-left {
+    float: left;
+    background-color: aqua;
+}
+
+.topnav-search {
+    display: flex;
+    justify-content: center;
+    background-color: lime;
+}
+
+.topnav-right {
+    float: right;
+    background-color: red;
+}
+/*---------------------------------------------------------------------------*/
