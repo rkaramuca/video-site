@@ -1,58 +1,105 @@
+/*grid*/
+.grid {
+    margin-top: 20px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 13% 29% 29% 29%;
+    grid-template-rows: 45px repeat(4, 1fr);
+    grid-template-areas:
+        "logo search pfp settings"
+        "bar vid1 vid2 vid3"
+        "bar vid4 vid5 vid6"
+        "bar vid7 vid8 vid9"
+        "bar vid10 vid11 vid12";
+    height: 100vh;
+    width: 100vw;
+}
+
 /*---------------------------------Navbar------------------------------------*/
 #topnav {
     background-color: #333;
     overflow: hidden;
-    display: flex;
 }
 
 #topnav a {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-    justify-content: center;
 }
 
 .topnav-left {
+    grid-area: logo;
+    display: flex;
     background-color: aqua;
+    justify-content: center;
+    align-items: center;
+
+    /* temp format for text placeholder*/ 
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
 
 .topnav-search {
-    padding: 15px 15px;
-    margin-left:auto;
-    margin-right:auto;
+    grid-area: search;
+    margin-left: 10%;
+    margin-right: 10%;
     text-decoration: none;
     font-size: 16px;
-    justify-content: center;
     background-color: lime;
 }
 
-.topnav-right {
+.topnav-settings {
+    grid-area: settings;
     background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* temp format for text placeholder*/ 
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.topnav-pfp {
+    grid-area: pfp;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* temp format for text placeholder*/ 
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
 /*---------------------------------------------------------------------------*/
 
 /*----------------------------------Sidebar----------------------------------*/
-.sidebar {
-    height: 100%;
-    width: 100px;
-    margin-top: 50px;
-    margin-left: 8px;
-    position: fixed;
-    top: 15px;
-    left: 0;
+#sidebar {
     background-color: #bdbdbd;
     z-index: 1;
+    grid-area: bar;
 }
 
-.sidebar a {
-    padding: 5px 16px;
-    display: block;
+#sidebar a {
+    padding: 5px 5px;
+    display: flex;
     font-size: 20px;
     text-decoration: none;
+    text-align: left;
     color: black;
 }
 
-.sidebar a:hover {
+#sidebar a:hover {
     color: grey;
 }
 /*---------------------------------------------------------------------------*/
+
+/* tesT*/
+
+#test {
+    background-color: green;
+    grid-area: vid2;
+}
